@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "a0f3faeb-3fcf-4bf3-916d-a365d7b5694a",
+		"name": "ApiRest_Productos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Mostrar todos los productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/producto",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar producto búscado por 'codigo de barra'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/producto/6607173",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"producto",
+						"6607173"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar productos búscados por 'codigo de barra', 'nombre' o 'descripción'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/searchProducto/aquí va el texto",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"searchProducto",
+						"aquí va el texto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo_barra\": 1234567,\r\n    \"nombre\": \"Mouse Gamer MSI M99\",\r\n    \"descripcion\": \"Mouse gamer de MSI modelo M99 con luces RGB\",\r\n    \"precio\": 55.50,\r\n    \"url_imagen\": \"https://www.google.com.sv/url?sa=i&url=https%3A%2F%2Fwww.excaliberpc.com%2F741438%2Fmsi-m99-rgb-gaming-mouse.html&psig=AOvVaw3u-cz1l9MDgpHkiWAT-_BR&ust=1643558785339000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKid6-Gr1_UCFQAAAAAdAAAAABAN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/addProducto",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Desktop HP\",\r\n    \"descripcion\": \"Desktop HP Intel Core I3 9 generación\",\r\n    \"precio\": 600.50,\r\n    \"url_imagen\": \"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6402/6402515_sd.jpg\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/editProducto/1788198",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"editProducto",
+						"1788198"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/destroyProducto/2245867",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"destroyProducto",
+						"2245867"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
